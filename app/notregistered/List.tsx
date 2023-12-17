@@ -158,10 +158,10 @@ function List({ barangays}: { barangays: string[]}) {
                         }
                         <div className="flex items=center justify-between gap-1">
                           <div className='text-sm px-1'>{member.lastname}, {member.firstname} {member.middlename}</div>
-                          <Ref
+                          {/* <Ref
                             handleUpdateList={handleUpdateList}
                             memberId={member.id}
-                            householdId={household.household_id}/>
+                            householdId={household.household_id}/> */}
                         </div>
                       </React.Fragment>
                     ))
