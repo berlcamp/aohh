@@ -76,7 +76,7 @@ function List({ barangays}: { barangays: string[]}) {
       const params = {
         filterKeyword: '',
         filterBarangay,
-        take: 10,
+        take: 1000,
         skip: 0
       }
 
