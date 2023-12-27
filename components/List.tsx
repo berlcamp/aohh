@@ -108,6 +108,9 @@ function List({ barangays}: { barangays: string[]}) {
   return (
     <div>
       <div className="text-center text-2xl text-gray-300">Household Members (Additionals)</div>
+      {
+        data.length > 0 && <div className='text-center text-xs text-gray-300'>{data.length} total results.</div>
+      }
       <div className="text-gray-300 text-sm mt-6 mb-2">
         <form onSubmit={handleSubmit}>
           <div className="w-full flex justify-between space-x-2">
