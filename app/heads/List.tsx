@@ -209,7 +209,7 @@ function List({ barangays}: { barangays: string[]}) {
               <thead>
                 <tr className='border-b border-gray-300'>
                   <th className='text-xs px-1 text-left'>Head of Household</th>
-                  {/* <th className='text-xs px-1 text-left'>New SP-ID</th> */}
+                  <th className='text-xs px-1 text-left'>New SP-ID</th>
                   <th className='text-xs px-1 text-left'>SP Name</th>
                 </tr>
               </thead>
@@ -218,7 +218,7 @@ function List({ barangays}: { barangays: string[]}) {
                   data.map((head: HouseholdHeadType, index) => (
                     <tr key={index} className='border-b border-gray-300'>
                       <td className='text-xs px-1 py-2'>{head.fullname} (H-ID: {head.id})</td>
-                      {/* <td className='py-2'>
+                      <td className='py-2'>
                         <div>
                           <div className='flex items-center space-x-1'>
                             <span className='text-xs'>SP-</span>
@@ -229,11 +229,11 @@ function List({ barangays}: { barangays: string[]}) {
                               type='text'/>
                             <button
                               onClick={() => handleSave(index, head.id, head.sp_id)}
-                              className='text-xs bg-emerald-600 hover:bg-emerald-700 active:bg-emerald-500 text-white px-1 py-1 rounded-sm'><FaLocationArrow /></button>
+                              className='text-xs bg-emerald-600 hover:bg-emerald-700 active:bg-emerald-500 text-white px-1 py-1 rounded-sm'>Save</button>
                           </div>
                         </div>
                         <div className='text-[10px] font-bold text-red-500'>{head.error_message}</div>
-                      </td> */}
+                      </td>
                       <td className='text-[10px] px-1 py-2'>
                         <div>{head.sp_fullname}</div>
                         <div className='text-orange-600'>{head.sp_id !== null ? `[SP-${head.sp_id}]` : ''}</div>
