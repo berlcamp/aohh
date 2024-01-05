@@ -62,7 +62,8 @@ function List({ barangays}: { barangays: string[]}) {
     setLoading(true)
 
     const params = {
-      sp_id: spId
+      sp_id: spId,
+      filterBarangay
     }
 
     try {
@@ -154,6 +155,7 @@ function List({ barangays}: { barangays: string[]}) {
                   {
                     sps.map((sp, index) => <option key={index} value={sp.id}>{sp.name}</option>)
                   }
+                  <option value='nosp'>Without SP</option>
               </select>
             </div>
           </div>
