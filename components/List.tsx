@@ -124,7 +124,7 @@ function List({ barangays}: { barangays: string[]}) {
                   }
               </select>
             </div>
-            {/* <div className='flex space-x-1'>
+            <div className='flex space-x-1'>
               <input
                 placeholder='Search Name'
                 className='outline-none text-black px-1 py-px w-48'
@@ -139,7 +139,7 @@ function List({ barangays}: { barangays: string[]}) {
                 type='button'
                 onClick={() => setFilterName('')}
                 className='bg-gray-600 hover:bg-gray-700 text-xs text-white font-bold px-2 py-2'>Clear</button>
-            </div> */}
+            </div>
           </div>
         </form>
       </div>

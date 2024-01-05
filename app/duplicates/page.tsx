@@ -52,7 +52,8 @@ export default async function Home() {
 
   return (
     <div className="px-4 mx-auto">
-      <div className='sm:fixed sm:top-32 sm:left-5 mt-2 sm:mt-0 mb-4'>
+      <div className='text-center pt-10 text-bold text-gray-300'>This function is no longer available, please contact Berl if you have concern.</div>
+      {/* <div className='sm:fixed sm:top-32 sm:left-5 mt-2 sm:mt-0 mb-4'>
         <div className="text-white">Legend:</div>
         <div className="text-gray-300 text-xs mt-2 flex flex-col items-start gap-3">
           <div>
@@ -78,7 +79,7 @@ export default async function Home() {
       </div>
       <div className="ml-0 sm:ml-32">
         <Households barangays={barangays}/>
-      </div>
+      </div> */}
     </div>
   )
 }

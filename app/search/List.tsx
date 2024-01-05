@@ -7,12 +7,13 @@ interface SpType {
   id: string
   new: string
   name: string
+  barangay: string
 }
 
 interface NamesType {
   id: string
   fullname: string
-  barangay: string
+  address: string
   service_provider: SpType
 }
 
@@ -94,30 +95,26 @@ function List() {
           <table>
             <thead>
               <tr className='border-b border-gray-300'>
-                <th className='text-xs px-1 text-left'>Ref-ID</th>
                 <th className='text-xs px-1 text-left'>Fullname</th>
-                <th className='text-xs px-1 text-left'>SP-ID</th>
-                <th className='text-xs px-1 text-left'>SP Fullname</th>
+                <th className='text-xs px-1 text-left'>Service Provider</th>
               </tr>
             </thead>
             <tbody>
               {
                 data.map((voter: NamesType, index) => (
                   <tr key={index} className='border-b border-gray-300'>
-                    <td className='text-xs px-1 py-2'>R-{voter.id}</td>
-                    <td className='text-xs px-1 py-2'>{voter.fullname}</td>
                     <td className='text-xs px-1 py-2'>
-                      {
-                        voter.service_provider && <span>{voter.service_provider.id}</span>
-                      }
+                      <div>{voter.fullname}</div>
+                      <div className='text-green-700'>{voter.address}</div>
+                      <div className='text-orange-600'>[R-{voter.id}]</div>
                     </td>
                     <td className='text-xs px-1 py-2'>
                       {
                         voter.service_provider &&
                           <>
-                          {
-                            voter.service_provider.new !== '' ? voter.service_provider.new : voter.service_provider.name
-                          }
+                            <div>{voter.service_provider.new !== '' ? voter.service_provider.new : voter.service_provider.name}</div>
+                            <div className='text-green-700'>{voter.service_provider.barangay}</div>
+                            <div className='text-orange-600'>[SP-{voter.service_provider.id}]</div>
                           </>
                       }
                     </td>
