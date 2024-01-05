@@ -30,8 +30,9 @@ function List({ barangays}: { barangays: string[]}) {
   const apiUrl = process.env.NEXT_PUBLIC_AO_API_URL ?? ''
 
   const fetchSps = async () => {
+    setData([])
     if (filterBarangay === '') {
-      setData([])
+      setSps([])
       return
     }
     setLoading(true)
@@ -121,7 +122,6 @@ function List({ barangays}: { barangays: string[]}) {
   }
 
   useEffect(() => {
-    setFilterSpId('')
     fetchSps()
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [filterBarangay])
@@ -160,12 +160,12 @@ function List({ barangays}: { barangays: string[]}) {
         </div>
       </div>
       { (filterBarangay === '' || filterBarangay === 'Choose Barangay') && <div className='bg-gray-800 text-gray-400 text-center border border-dashed border-gray-400 py-10'>Please choose Barangay...</div> }
-      { (filterBarangay !== '' && filterBarangay !== 'Choose Barangay' && data.length === 0) && <div className='bg-gray-800 text-gray-400 text-center border border-dashed border-gray-400 py-10'>No results found for this barangay.</div> }
+      { (filterBarangay !== '' && filterBarangay !== 'Choose Barangay' && data.length === 0) && <div className='bg-gray-800 text-gray-400 text-center border border-dashed border-gray-400 py-10'>Please choose SP...</div> }
       { loading && <Loading/> }
       {
         (!loading && data.length > 0) &&
           <div className='w-full flex flex-col border bg-gray-200 px-4 py-2'>
-            <div className='text-center mt-4 mb-10'>Members of SP <span className='font-bold'>ALCANTAR, RITCHEL BAGUIO</span></div>
+            <div className='text-center mt-4 mb-10'>Members of SP <span className='font-bold'>{data[0].sp_fullname}</span></div>
             <table>
               <thead>
                 <tr className='border-b border-gray-300'>
