@@ -30,7 +30,10 @@ function List({ barangays}: { barangays: string[]}) {
   const apiUrl = process.env.NEXT_PUBLIC_AO_API_URL ?? ''
 
   const fetchSps = async () => {
-    if (filterBarangay === '') return
+    if (filterBarangay === '') {
+      setData([])
+      return
+    }
     setLoading(true)
 
     const params = {
