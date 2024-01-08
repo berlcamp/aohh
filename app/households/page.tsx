@@ -53,8 +53,8 @@ export default async function Home() {
   return (
     <div className="px-4 mx-auto">
       <div>
-        <div className='text-center pt-10 text-bold text-gray-300'>This function is no longer available, please contact Berl if you have concern.</div>
-        {/* <List barangays={barangays}/> */}
+        {/* <div className='text-center pt-10 text-bold text-gray-300'>This function is no longer available, please contact Berl if you have concern.</div> */}
+        <List barangays={barangays}/>
       </div>
     </div>
   )

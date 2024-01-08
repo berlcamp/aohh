@@ -7,6 +7,7 @@ import toast from 'react-hot-toast'
 interface SpsType {
   id: string
   name: string
+  new_fullname: string
 }
 
 interface VotersType {
@@ -153,7 +154,7 @@ function List({ barangays}: { barangays: string[]}) {
                 className="border text-gray-600 outline-none w-32">
                   <option>Choose SP</option>
                   {
-                    sps.map((sp, index) => <option key={index} value={sp.id}>{sp.name}</option>)
+                    sps.map((sp, index) => <option key={index} value={sp.id}>{sp.new_fullname}</option>)
                   }
                   <option value='nosp'>Without SP</option>
               </select>
