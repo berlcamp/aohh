@@ -125,9 +125,10 @@ function List({ barangays}: { barangays: string[]}) {
                       <td className='text-xs px-1 py-2'>{item.id}</td>
                       <td className='text-xs px-1 py-2'>{item.name}</td>
                       <td className='py-2'>
-                        <Replacement
+                        {item.replacement}
+                        {/* <Replacement
                           sp={item}
-                        />
+                        /> */}
                       </td>
                     </tr>
                   ))
