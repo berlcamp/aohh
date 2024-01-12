@@ -14,6 +14,7 @@ interface NamesType {
   id: string
   fullname: string
   address: string
+  precinct: string
   service_provider: SpType
 }
 
@@ -96,6 +97,7 @@ function List() {
             <thead>
               <tr className='border-b border-gray-300'>
                 <th className='text-xs px-1 text-left'>Fullname</th>
+                <th className='text-xs px-1 text-left'>Precinct</th>
                 <th className='text-xs px-1 text-left'>Service Provider</th>
               </tr>
             </thead>
@@ -108,6 +110,7 @@ function List() {
                       <div className='text-green-700'>{voter.address}</div>
                       <div className='text-orange-600'>[R-{voter.id}]</div>
                     </td>
+                    <td className='text-xs px-1 py-2'>{voter.precinct}</td>
                     <td className='text-xs px-1 py-2'>
                       {
                         voter.service_provider &&

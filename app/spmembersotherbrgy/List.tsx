@@ -127,7 +127,7 @@ function List({ barangays}: { barangays: string[]}) {
               <thead>
                 <tr className='border-b border-gray-300'>
                   <th className='text-xs px-1 text-left'>Name of Member</th>
-                  <th className='text-xs px-1 text-left'>New SP-ID</th>
+                  {/* <th className='text-xs px-1 text-left'>New SP-ID</th> */}
                   <th className='text-xs px-1 text-left'>SP Name</th>
                 </tr>
               </thead>
@@ -136,7 +136,7 @@ function List({ barangays}: { barangays: string[]}) {
                   data.map((item: VotersType, index) => (
                     <tr key={index} className='border-b border-gray-300'>
                       <td className='text-xs px-1 py-2'>{item.fullname}</td>
-                      <td className='py-2'>
+                      {/* <td className='py-2'>
                         <div>
                           <div className='flex items-center space-x-1'>
                             <span className='text-xs'>SP-</span>
@@ -151,7 +151,7 @@ function List({ barangays}: { barangays: string[]}) {
                           </div>
                         </div>
                         <div className='text-[10px] font-bold text-red-500'>{item.error_message}</div>
-                      </td>
+                      </td> */}
                       <td className='text-[10px] px-1 py-2'>
                         <div>{item.sp_fullname}</div>
                         <div className='text-green-700'>{item.sp_address}</div>
